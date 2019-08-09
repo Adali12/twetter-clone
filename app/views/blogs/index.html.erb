@@ -1,0 +1,29 @@
+
+<h3>LIST OF ALL CONTENT</h3>
+<b><hr></b>
+</body>
+</html>
+<p><%= notice %></p>
+<table border="0" class="table">
+  <% @blogs.each do |blog| %>
+    <tr>  
+    <td><b><u>Content</td></u></b></tr><tr><td><%= blog.content %></td>
+    </tr>
+    <tr>
+    <td><%= link_to 'Read more', blog_path(blog.id) %></td>
+    </tr>
+    <tr>
+    <td><%= link_to "Edit your post", edit_blog_path(blog.id) %></td>
+    </tr>
+    <tr>
+    <td><%= link_to link_to 'Delete your post', blog_path(blog.id), method: :delete %></td>
+    </tr>
+    <% end %>
+    </table>
+    <br>
+    <div class="new">
+    <%= link_to 'Post a new tweetts', new_blog_path %>
+    </div>
+    <div class="footer1">
+    <p >copyright© 2019 simple twitter<br>abayiringira adali</p>
+    </div>

@@ -1,0 +1,20 @@
+<%= form_with(model: @blog, local: true,url: choose_new_or_edit) do |form| %>
+    <% if @blog.errors.any? %>
+      <div id="error_explanation">
+      <h2><%= @blog.errors.count %>errors occurred.</h2>
+      <ul class="msg">
+      <% @blog.errors.full_messages.each do |msg| %>
+      <li ><%= msg %></li>
+      <% end %>
+      </ul>
+      </div>
+    <% end %>
+      <hr>
+      <div class="p">
+      <b class="form-title"> <%= form.label :write_your_post  %></b><br>
+      <%= form.text_area:content,class:"textarea" %><br>
+      <%= form.submit class: "submit"  %>
+      <%= link_to "BACK", blogs_path ,class:"link" %>
+    </div>
+<% end %>
+  

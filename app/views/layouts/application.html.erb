@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Twetter</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+    <div class="navbar">
+      <ul class='nav-item'>  
+        <li class="logo"><%= image_tag("icons8-twitter-26 (1).png" ) %> </li>       
+        <li><Strong> Tweets</Strong> </li>   
+      </ul> 
+    </div><br>
+    <div class="all-content">   
+    <%= yield %>
+    </div>
+    <div class="footer">
+    <p>copyright© 2019 simple twitter<br>abayiringira adali</p>
+    </div>
+  </body>
+</html>
